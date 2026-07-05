@@ -1,0 +1,38 @@
+/**
+ * @copyright   (C) 2026 Brian Teeman.
+ * @license     GNU General Public License version 2 or later
+ */
+.copy-code-wrapper {
+    position: relative;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+
+    padding: .35rem .6rem;
+
+    border: 0;
+    border-radius: .3rem;
+
+    background: rgba(0, 0, 0, .2);
+    color: inherit;
+
+    cursor: pointer;
+
+    transition: background .2s;
+}
+
+.copy-code-button:hover,
+.copy-code-button:focus-visible {
+    background: rgba(0, 0, 0, .35);
+}
+
+.copy-code-button svg {
+    display: block;
+}
