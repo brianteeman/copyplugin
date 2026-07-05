@@ -8,7 +8,7 @@
  */
 declare(strict_types=1);
 
-namespace Joomla\Plugin\System\CopyCode\Extension;
+namespace Brian\Plugin\System\CopyCode\Extension;
 
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\WebAsset\WebAssetManager;

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.0" group="system" method="upgrade">
 	<name>PLG_SYSTEM_COPYCODE</name>
-	<author>Your Name</author>
-	<creationDate>June 2026</creationDate>
-	<copyright>Copyright (c) 2026 Your Name. All rights reserved.</copyright>
+	<author>Brian Teeman</author>
+	<creationDate>July 2026</creationDate>
+	<copyright>Copyright (c) 2026 Brian Teeman. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<authorEmail>your.email@example.com</authorEmail>
+	<authorEmail>brian@teeman.net</authorEmail>
 	<authorUrl>https://brian.teeman.net</authorUrl>
 	<version>1.0.0</version>
 	<description>PLG_SYSTEM_COPYCODE_XML_DESCRIPTION</description>
+	<namespace path="src">Brian\Plugin\System\CopyCode</namespace>
 	<updateservers>
-		<server type="extension" priority="1" name="CopyCode Update Site">https://raw.githubusercontent.com/yourusername/copycode/main/manifest.xml</server>
-	</updateservers>    <files>
+		<server type="extension" priority="1" name="CopyCode Update Site">https://raw.githubusercontent.com/brianteeman/copycode/main/manifest.xml</server>
+	</updateservers>
+	<files>
         <folder plugin="copycode">services</folder>
         <folder>src</folder>
     </files>
