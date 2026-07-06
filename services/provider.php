@@ -14,6 +14,8 @@ use Joomla\CMS\Factory;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
+use Brian\Plugin\System\CopyCode\Extension\CopyCode;
+
 
 return new class implements ServiceProviderInterface
 {
@@ -25,7 +27,7 @@ return new class implements ServiceProviderInterface
 
                 $dispatcher = $container->get(DispatcherInterface::class);
 
-                $plugin = new \Joomla\Plugin\System\CopyCode\Extension\CopyCode(
+                $plugin = new CopyCode(
                     $dispatcher,
                     (array) Factory::getApplication()->getConfig(),
                 );
