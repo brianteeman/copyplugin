@@ -32,14 +32,14 @@ final class CopyCode extends CMSPlugin
 
         $wa->registerAndUseScript(
             'plg_system_copycode.copycode',
-            'plg_system_copycode/js/copycode.js',
+            'media/plg_system_copycode/js/copycode.js',
             [],
             ['type' => 'module']
         );
 
         $wa->registerAndUseStyle(
             'plg_system_copycode.copycode',
-            'plg_system_copycode/css/copycode.css'
+            'media/plg_system_copycode/css/copycode.css'
         );
 
         /* Load the language strings for the JavaScript */
