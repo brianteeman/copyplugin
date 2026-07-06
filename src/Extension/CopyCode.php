@@ -13,6 +13,7 @@ namespace Brian\Plugin\System\CopyCode\Extension;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\WebAsset\WebAssetManager;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
 
 final class CopyCode extends CMSPlugin
 {
