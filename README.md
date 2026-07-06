@@ -1,4 +1,4 @@
-# CopyCode
+# CopyCode Plugin for Joomla 6
 
 A lightweight Joomla 6 system plugin that automatically adds a **Copy** button to code snippets in your articles, making it easy for visitors to copy code to their clipboard with a single click.
 
