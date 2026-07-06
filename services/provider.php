@@ -1,21 +1,14 @@
 <?php
-/**
- * @package     Joomla.Plugin
- * @subpackage  System.copycode
- *
- * @copyright   (C) 2026 Brian Teeman. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
+
 declare(strict_types=1);
 
+use Brian\Plugin\System\CopyCode\Extension\CopyCode;
 use Joomla\CMS\Extension\PluginInterface;
-use Joomla\CMS\Extension\Service\Provider\PluginFactory;
 use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\PluginHelper;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 use Joomla\Event\DispatcherInterface;
-use Brian\Plugin\System\CopyCode\Extension\CopyCode;
-
 
 return new class implements ServiceProviderInterface
 {
@@ -25,12 +18,12 @@ return new class implements ServiceProviderInterface
             PluginInterface::class,
             function (Container $container) {
 
-                $dispatcher = $container->get(DispatcherInterface::class);
-
                 $plugin = new CopyCode(
-                    $dispatcher,
-                    (array) Factory::getApplication()->getConfig(),
+                    $container->get(DispatcherInterface::class),
+                    (array) PluginHelper::getPlugin('system', 'copycode')
                 );
+
+                $plugin->setApplication(Factory::getApplication());
 
                 return $plugin;
             }
