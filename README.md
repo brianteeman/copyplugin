@@ -4,6 +4,9 @@ A lightweight Joomla 6 system plugin that automatically adds a **Copy** button t
 
 Perfect for documentation sites, tutorials, developer blogs, and any website that publishes code examples.
 
+<img width="1280" height="640" alt="copycode" src="https://github.com/user-attachments/assets/63e9dd9f-89ca-42d6-b48d-305ec52630dd" />
+
+
 ## Features
 
 - Automatically adds a copy button to code blocks
