@@ -8,7 +8,7 @@
 	<authorEmail>brian@teeman.net</authorEmail>
 	<authorUrl>https://brian.teeman.net</authorUrl>
 	<version>1.0.0</version>
-	<description>PLG_SYSTEM_COPYCODE_XML_DESCRIPTION</description>
+	<description>[CDATA]PLG_SYSTEM_COPYCODE_XML_DESCRIPTION[/CDATA]</description>
 	<namespace path="src">Brian\Plugin\System\CopyCode</namespace>
 	<updateservers>
 		<server type="extension" priority="1" name="CopyCode Update Site">https://raw.githubusercontent.com/brianteeman/copycode/main/manifest.xml</server>

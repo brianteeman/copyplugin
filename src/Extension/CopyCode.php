@@ -40,5 +40,11 @@ final class CopyCode extends CMSPlugin
             'plg_system_copycode.copycode',
             'plg_system_copycode/css/copycode.css'
         );
+
+        /* Load the language strings for the JavaScript */
+        Text::script('PLG_SYSTEM_COPYCODE_COPY');
+        Text::script('PLG_SYSTEM_COPYCODE_COPIED');
+        Text::script('PLG_SYSTEM_COPYCODE_FAILED');
+
     }
 }

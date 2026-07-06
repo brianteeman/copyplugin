@@ -44,7 +44,7 @@ class CopyCode {
 
             const text = document.createElement('span');
             text.className = 'copy-text';
-            text.textContent = 'Copy';
+            text.textContent = [Joomla.Text._('PLG_SYSTEM_COPYCODE_COPY')];
 
             button.appendChild(icon);
             button.appendChild(text);
@@ -54,18 +54,18 @@ class CopyCode {
                     await navigator.clipboard.writeText(code.textContent);
 
                     icon.innerHTML = CHECK_ICON;
-                    text.textContent = 'Copied';
+                    text.textContent = [Joomla.Text._('PLG_SYSTEM_COPYCODE_COPIED')];
 
                     setTimeout(() => {
                         icon.innerHTML = COPY_ICON;
-                        text.textContent = 'Copy';
+                        text.textContent = [Joomla.Text._('PLG_SYSTEM_COPYCODE_COPY')];
                     }, 2000);
 
                 } catch (e) {
-                    text.textContent = 'Failed';
+                    text.textContent = [Joomla.Text._('PLG_SYSTEM_COPYCODE_FAILED')];
 
                     setTimeout(() => {
-                        text.textContent = 'Copy';
+                        text.textContent = [Joomla.Text._('PLG_SYSTEM_COPYCODE_COPY')];
                     }, 2000);
                 }
             });
