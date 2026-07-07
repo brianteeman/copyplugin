@@ -6,6 +6,9 @@
  * @copyright   (C) 2026 Brian Teeman. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+// no direct access
+defined('_JEXEC') or die;
+
 declare(strict_types=1);
 
 namespace Brian\Plugin\System\CopyCode\Extension;
