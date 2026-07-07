@@ -6,25 +6,57 @@
  * @copyright   (C) 2026 Brian Teeman. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-// no direct access
-defined('_JEXEC') or die;
 
 declare(strict_types=1);
 
 namespace Brian\Plugin\System\CopyCode\Extension;
 
+use Joomla\CMS\Event\Application\BeforeCompileHeadEvent;
+use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\WebAsset\WebAssetManager;
-use Joomla\CMS\Factory;
-use Joomla\CMS\Language\Text;
+use Joomla\Event\SubscriberInterface;
 
-final class CopyCode extends CMSPlugin
+// no direct access
+\defined('_JEXEC') or die;
+
+/**
+ * CopyCode System plugin.
+ * Adds a button to copy code, when code is displayed in content.
+ */
+final class CopyCode extends CMSPlugin implements SubscriberInterface
 {
-    protected $autoloadLanguage = true;
+	/**
+	 *
+	 * Load the language file on instantiation.
+	 *
+	 * @var bool
+	 */
+	protected $autoloadLanguage = true;
 
-    public function onBeforeCompileHead(): void
+	/**
+	 * Get the methods to be called on events
+	 *
+	 * @return string[], each item being an event => method
+	 *
+	 */
+	public static function getSubscribedEvents(): array
+	{
+		return [
+			'onBeforeCompileHead' => 'addCopyCodeButton'
+                ];
+    }
+
+	/**
+	 * Add the Javascript and CSS to copy displayed code
+	 *
+	 * @param   BeforeCompileHeadEvent  $event
+	 *
+	 * @return  void
+	 */
+	public function addCopyCodeButton(BeforeCompileHeadEvent $event): void
     {
-        $app = Factory::getApplication();
+        $app = $event->getApplication();
 
         if ($app->isClient('administrator')) {
             return;
@@ -49,6 +81,5 @@ final class CopyCode extends CMSPlugin
         Text::script('PLG_SYSTEM_COPYCODE_COPY');
         Text::script('PLG_SYSTEM_COPYCODE_COPIED');
         Text::script('PLG_SYSTEM_COPYCODE_FAILED');
-
     }
 }
