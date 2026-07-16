@@ -11,7 +11,7 @@
 	<description><![CDATA[PLG_SYSTEM_COPYCODE_XML_DESCRIPTION]]></description>
 	<namespace path="src">Brian\Plugin\System\CopyCode</namespace>
 	<updateservers>
-		<server type="extension" priority="1" name="CopyCode Update Site">https://raw.githubusercontent.com/brianteeman/copycode/main/manifest.xml</server>
+		<server type="extension" priority="1" name="CopyCode Update Site">https://raw.githubusercontent.com/brianteeman/copyplugin/main/manifest.xml</server>
 	</updateservers>
 	<files>
         <folder plugin="copycode">services</folder>
