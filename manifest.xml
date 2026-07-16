@@ -1,14 +1,14 @@
 <updates>
 	<update>
 		<name>CopyCode</name>
-		<description>Shows a Bootstrap modal containing module output when right-clicking a configured selector.</description>
+		<description>CopyCode Plugin for Joomla 6</description>
 		<element>copycode</element>
 		<type>plugin</type>
 		<folder>system</folder>
 		<version>1.0.0</version>
 		<client>site</client>
 		<downloads>
-			<downloadurl type="upgrade" format="zip">https://github.com/brianteeman/hiddensecret/archive/refs/tags/beta.zip</downloadurl>
+			<downloadurl type="upgrade" format="zip">https://github.com/brianteeman/copyplugin/archive/refs/tags/beta.zip</downloadurl>
 		</downloads>
 		<tags>Stable</tags>
 		<maintainer>Brian Teeman</maintainer>
